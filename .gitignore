@@ -1,0 +1,24 @@
+# LaTeX files
+**.aux
+**.log
+**.out
+**.synctex.gz
+**.toc
+**.fdb_latexmk
+**.fls
+**.blg
+**.bbl
+**.lot
+**.lof
+**.glo
+**.gls
+**.ist
+**.acn
+**.acr
+**.alg
+**.glg
+**.glsdefs
+**.xdy
+**.loa
+**.run.xml
+**.bcf
