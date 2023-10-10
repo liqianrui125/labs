@@ -64,8 +64,8 @@
 
 %\date{} %if you don't want the date to show up in your report, uncomment this (=remove the percentage symbol at the start of the line)
 \setcounter{page}{1} % starts counting pages from the first
-\title{\textit{Experiment 6:} Lab Report Template} % change to an actual title for your report!
-\author{Put Your Name Here}
+\title{\textit{Experiment [COM]:} Computational Methods - Exploring the inversion of Pyramidal Centres and Analysing Carbene Complexes} % change to an actual title for your report!
+\author{Qianrui Li}
 
 \begin{document}
 \twocolumn[ %this command makes your title and abstract both be one column only
@@ -75,9 +75,13 @@
 \vspace{-0.3in}
 \section*{Abstract}
 {\large 
-A good abstract should include a clear statement of the experimental aim, some significant data points presented correctly, as well as a concise summary of trends and observations concerning your data. A great abstract will mention the specific methods used and the validity/level of error in the presnted data.
+This experiment was based on computational methods including "Molecular Mechanics" and "Semi-Empirical" since the eneryg of a molecule was hard to determine through wet-lab experiments. 
+The inversion activation energy of 16 different trigonal pyramidal molecules with N or P as the central atom was obtained. The difference among the activation energies was disccussed based on the nature of the central atom, the substituent effect, the steric effect, the conjugation effect, and the ring strain effect.
+The properties of two types of carbene ligand, Fishcer and Schrock, were studied. The ground electronic state, the electron ortbials, the partial double bond properties of C-Y bond in Fischer carbene, and the reactivity of both types of carbene were disccussed based on the computational calcualtion. Further relative wet-lab experiment could be process to support the computational calcualted results.
 
-When in doubt, please consult the laboratory report guidelines available on Learn. 
+%A good abstract should include a clear statement of the experimental aim, some significant data points presented correctly, as well as a concise summary of trends and observations concerning your data. A great abstract will mention the specific methods used and the validity/level of error in the presnted data.
+
+%When in doubt, please consult the laboratory report guidelines available on Learn. 
 
 }
 \vspace{0.4in}
@@ -87,17 +91,37 @@ When in doubt, please consult the laboratory report guidelines available on Lear
 
 \section{Introduction} % example of a heading
 
-Ideally, your introduction should include a concise summary of the chemistry background for the experiment; an explanation of any key terms and concepts should be given. Aim to include \textbf{any and all} information you may need to mount a solid, well-backed discussion section. In-text references and good usage of literature sources are both crucial for a good introduction.
+The inversion of the pyramidal centres of a molecule like amine was very fast, which would results in racemic mixture. The energy barrier of the inversion of a pyramidal centre is called the activation energy of inversion ($E_a$) as shown in Figure 1. During the transition state of the inversion, the $sp^3$ orbital changed to $sp^2$ orbital. The activation energy of inversion is related to the nature of the central atom, the substituent effect, the steric effect, the conjugation effect, and the ring strain effect, which would be disccussed in this experiment through a computational method.
 
-Please make use of relevant figures to illustrate your points.
-You will also be marked on your use of scientific language and overall presentation.
-If you aren't sure what is appropriate for academic writing, please consult the many guides available online, such as \href{https://libguides.reading.ac.uk/writing/style}{\textbf{this one}}.
+\begin{figure}[h!]
+      \centering
+      \includegraphics[width=0.95\columnwidth]{CH2 HOMO-1.png} %an example of how to make your figure a specific size (fraction of the width of the column), if you'd like it to span the column instead, delete the number before the \)
+      \vspace{2mm} %just an example of how space can be added if need be, replace with '\hspace' for horizontal padding
+      \caption{Same}
+\end{figure}
+
+A carbene ligand was a -$CR_2$ group with two non-bonding electrons. There were two types of carbene: Fsicher and Schrock as shown in Figure 2. The molecular orbitals, bond properties, and reactivity of these two types of carbene would be disccussed based on computational method. 
+\begin{figure}[h!]
+      \centering
+      \includegraphics[width=0.95\columnwidth]{CH2 HOMO-1.png} %an example of how to make your figure a specific size (fraction of the width of the column), if you'd like it to span the column instead, delete the number before the \)
+      \vspace{2mm} %just an example of how space can be added if need be, replace with '\hspace' for horizontal padding
+      \caption{Same}
+\end{figure}
+
+The Computational method was used in this experiment as the energy of a molecule could not be detected directly through a wet-lab experiment. The first method used was "Molecular Mechanics" method, which was based on empirical potential energy functions.\cite{MMFF1} It calcualted the molecular energy and predited the most stable strucutre of the molecule.\cite{MMFF2} This method was relatively simple and fast, which would save time for the next method. The second method used was "Semi-Empirical" method, which was more accurate but would take a much longer time. This method was based on the quantum mechanics, and it would calculate the energy of the molecule, electron density, and molecular orbitals. 
+
+
+%Ideally, your introduction should include a concise summary of the chemistry background for the experiment; an explanation of any key terms and concepts should be given. Aim to include \textbf{any and all} information you may need to mount a solid, well-backed discussion section. In-text references and good usage of literature sources are both crucial for a good introduction.
+
+%Please make use of relevant figures to illustrate your points.
+%You will also be marked on your use of scientific language and overall presentation.
+%If you aren't sure what is appropriate for academic writing, please consult the many guides available online, such as \href{https://libguides.reading.ac.uk/writing/style}{\textbf{this one}}.
 
 
 
 \section{Methodology}
 
-Since the energy value is impossible to be measured experimentally, the computational method was used in the experiment to obtain the molecular energy. 
+Since the energy value was impossible to be measured experimentally, the computational method was used in the experiment to obtain the molecular energy. 
 
 Trimethylamine was built via Spartan Student version8. It was optimised using "Equilibrium Geometry" and "Molecular Mechanics" (MMFF). This calculation was repeated using "Semi-Empirical" (PM3) instead of MMFF to obtain more accurate properties about the molecule. The energy and dihedrals of the molecule were recorded. Trimethylamine was constrained to a planar by constraining the dihedral angle to 180 degrees. The planar $NH_3$ was optimised with the same method. The energy of the planar $NH_3$ was recorded. These steps were repeated with different molecules: $PMe_3$, $N^iPr_3$, $P^iPr_3$, $PBr_3$, $PCl_3$, $PF_3$, $PPhMe_2$, $PPhMe^tBu$, $P(C_6H_{11})Me^nPr$, $PPhMe^nPr$, $PPhMe(4-MePh)$, $PPhMe(SiH_3)$, $PPh^iPr^tBu$, $PPh^iPr^tBu$, $(H_2CCH_2)NMe$.
 
@@ -112,7 +136,7 @@ $Ph(NH_2)CCr(CO)_5$, $TaCp_2Me(CH_2)$, and $TaCp_2Me(CH_2)AlMe_3$ were built and
 
 \section{Results}
 
-The ground state energy, the energy after constrained to a planar, and the dihedral angles of $NMe_3$, $PMe_3$, $N^iPr_3$, $P^iPr_3$, $PBr_3$, $PCl_3$, $PF_3$, $PPhMe_2$, $PPhMe^tBu$, $P(C_6H_{11})Me^nPr$, $PPhMe^nPr$, $PPhMe(4-MePh)$, $PPhMe(SiH_3)$, $PPh^iPr^tBu$, $PPh^iPr^tBu$, $(H_2CCH_2)NMe$  were recorded in Table 1. The activation energy of inversion for a molecule is calculated by subtracting the ground state energy from the energy of planar, and the result was recorded in Table 1. 
+The ground state energy, the energy after constrained to a planar, and the dihedral angles of $NMe_3$, $PMe_3$, $N^iPr_3$, $P^iPr_3$, $PBr_3$, $PCl_3$, $PF_3$, $PPhMe_2$, $PPhMe^tBu$, $P(C_6H_{11})Me^nPr$, $PPhMe^nPr$, $PPhMe(4-MePh)$, $PPhMe(SiH_3)$, $PPh^iPr^tBu$, $PPh^iPr^tBu$, $(H_2CCH_2)NMe$  were recorded in Table 1. The activation energy of inversion for a molecule was calculated by subtracting the ground state energy from the energy of planar, and the result was recorded in Table 1. 
 
 \begin{table}[h] 
 \caption{Energy of each molecule in the ground state (E), and the energy of the molecule when it constrained to a planar (E') were recorded. The activation energy of inversion ($E_a$).}
@@ -150,17 +174,37 @@ Name of the molecules & E (Triplet) (kJ/mol) & E (Singlet) (kJ/mol)\\ \hline
 \end{table}
 
 
-The $\sigma$-donating and $\pi$-accepting orbital of Fishcer (-C(OMe)Me) and Schrock (-$CH_2$) carbene ligand were shown in Figure 1. The energy of the HOMO for -C(OMe)Me was -9.1 eV and LUMO was 0.5 eV. The energy of HOMO for -$CH_2$ is -10.4eV and HOMO-1 was 11.5 eV. 
+The $\sigma$-donating and $\pi$-accepting orbital of Fishcer (-C(OMe)Me) and Schrock (-$CH_2$) carbene ligand were shown in \textbf{Figrue x}. The energy of the HOMO for -C(OMe)Me was -9.1 eV and LUMO was 0.5 eV. The energy of HOMO for -$CH_2$ was -10.4eV and HOMO-1 was 11.5 eV. 
 
 \begin{figure}[h!]
-\centering
-\includegraphics[width=0.95\columnwidth]{C(OMe)Me HOMO white background.png} %an example of how to make your figure a specific size (fraction of the width of the column), if you'd like it to span the column instead, delete the number before the \)
-\vspace{2mm} %just an example of how space can be added if need be, replace with '\hspace' for horizontal padding
-\caption{Same}
+      \centering
+      \includegraphics[width=0.95\columnwidth]{C(OMe)Me HOMO white background.png} %an example of how to make your figure a specific size (fraction of the width of the column), if you'd like it to span the column instead, delete the number before the \)
+      \vspace{2mm} %just an example of how space can be added if need be, replace with '\hspace' for horizontal padding
+      \caption{Same}
 \end{figure}
 
+\begin{figure}[h!]
+      \centering
+      \includegraphics[width=0.95\columnwidth]{C(OMe)Me LUMO white.png} %an example of how to make your figure a specific size (fraction of the width of the column), if you'd like it to span the column instead, delete the number before the \)
+      \vspace{2mm} %just an example of how space can be added if need be, replace with '\hspace' for horizontal padding
+      \caption{Same}
+\end{figure}
 
-The energy and C-O bond length of $Ph(OMe)CCr(CO)_5$ in four different structures were recorded in Table 3. The syn-conformation had lower energy than the anti-conformation, and the eclipsed form had lower energy than the staggered form. The syn-eclipsed structure had the lowest energy, meaning that the molecule was most stable under this structure. 
+\begin{figure}[h!]
+      \centering
+      \includegraphics[width=0.95\columnwidth]{CH2 HOMO-1.png} %an example of how to make your figure a specific size (fraction of the width of the column), if you'd like it to span the column instead, delete the number before the \)
+      \vspace{2mm} %just an example of how space can be added if need be, replace with '\hspace' for horizontal padding
+      %\caption{Same}
+\end{figure}
+
+\begin{figure}[h!]
+      \centering
+      \includegraphics[width=0.95\columnwidth]{CH2 HOMO.png} %an example of how to make your figure a specific size (fraction of the width of the column), if you'd like it to span the column instead, delete the number before the \)
+      \vspace{2mm} %just an example of how space can be added if need be, replace with '\hspace' for horizontal padding
+      \caption{Same}
+\end{figure}
+
+The energy and C-O bond length of $Ph(OMe)CCr(CO)_5$ in four different structures were recorded in Table 3. The syn-conformation had lower energy than the anti-conformation, and the eclipsed form had lower energy than the staggered form. The syn-eclipsed structure had the lowest energy, meaning that the molecule was most stable under this structure. \textbf{data needed}
 
 \begin{table}[h]
 \caption{The energy of  $Ph(OMe)CCr(CO)_5$ in four different structures}
@@ -171,18 +215,21 @@ Staggered    & -772.83 kJ/mol & -755.68 kJ/mol \\\bottomrule
 \end{tabular}
 \end{table}
 
-The charge of the central carbon of $Ph(OMe)CCr(CO)_5$, $Ph(NH_2)CCr(CO)_5$, $TaCp_2Me(CH_2)$, and $TaCp_2Me(CH_2)AlMe_3$ were recorded in Table 4. For Fischer carbene (-C(OMe)Me) molecule, the charge of the central carbon was less positive as the -OMe group was replaced by -$NH_2$ group, meaning it is less electrophilic. For Schrock (-$CH_2$) carbene, the charge of the central carbon become less negative, which indicates that the carbon become less nucleophilic when $AlMe_3$ was added to the central carbon. 
+The charge of the central carbon of $Ph(OMe)CCr(CO)_5$, $Ph(NH_2)CCr(CO)_5$, $TaCp_2Me(CH_2)$, and $TaCp_2Me(CH_2)AlMe_3$ were recorded in Table 4. For Fischer carbene (-C(OMe)Me) molecule, the charge of the central carbon was less positive as the -OMe group was replaced by -$NH_2$ group. For Schrock (-$CH_2$) carbene, the charge of the central carbon become less negative when $AlMe_3$ was added to the central carbon. 
 
 \begin{table}[h]
 \caption{The charge of the central carbon of Fischer and Schrock carbenes}
 \begin{tabular}{L{1.5in}C{1.5in}}\toprule
 Name of the molecules  & electrostatic (eV)    \\ \hline
- $Ph(OMe)CCr(CO)_5$    &  \\
+$Ph(OMe)CCr(CO)_5$    &  \\
 $Ph(NH_2)CCr(CO)_5$     &  \\
 $TaCp_2Me(CH_2)$     &  \\
 $TaCp_2Me(CH_2)AlMe_3$ & \\\bottomrule
 \end{tabular}
 \end{table}
+
+
+
 
 
 %\begin{figure}[h]
@@ -198,12 +245,12 @@ $TaCp_2Me(CH_2)AlMe_3$ & \\\bottomrule
 
 
 
-Please make sure you describe the data, particularly any trends that are apparent -- always avoid data-dumps. The best result section will guide the reader through the data, pointing out any important trends, values, or possible errors.
+%Please make sure you describe the data, particularly any trends that are apparent -- always avoid data-dumps. The best result section will guide the reader through the data, pointing out any important trends, values, or possible errors.
 
-\bigskip %this is a way to force LaTeX into inserting a blank line/space, can be small, medium, or fixed by instead using the '\vspace' command!
+%\bigskip %this is a way to force LaTeX into inserting a blank line/space, can be small, medium, or fixed by instead using the '\vspace' command!
 
-If you wish to learn more about how to format tables, please visit \href{https://es.overleaf.com/learn/latex/Tables}{\textbf{this page}}.
-You can also find a handy tool which can generate tables for you here: \url{https://www.tablesgenerator.com/}
+%If you wish to learn more about how to format tables, please visit \href{https://es.overleaf.com/learn/latex/Tables}{\textbf{this page}}.
+%You can also find a handy tool which can generate tables for you here: \url{https://www.tablesgenerator.com/}
 
 
 
@@ -231,15 +278,55 @@ $P(C_6H_11)Me^nPr$ vs. $PPhMe^nPr$\\
 
 \textbf{Part 2}
 
-The energy of a triplet Fischer ligand ($C(OMe)Me$) was higher than the energy of its singlet form as shown in \textbf{Table x}, meaning that it was more stable for a Fischer molecule to stay in a singlet form. Thus, the ground electronic state of Fischer ligands were singlet states instead of triplet states. However, for a Schrock ligand ($CH_2$), the energy of its triplet state was lower than its singlet states, meaning that triplet states is more stable for Schrock ligands. Therefore, the ground electronic state of Schrock ligands is triplet states. 
-The molecular orbital diagram of both $CH_2$ and $C(OMe)Me$ were shown in the \textbf{Figure x}. As $CH_2$ was a triplet, the energy of the two highest occupied molecular orbitals (HOMO)  were very close, so the stablest structures 
+The energy of a triplet Fischer ligand ($C(OMe)Me$) was higher than the energy of its singlet form as shown in \textbf{Table x}, meaning that it was more stable for a Fischer molecule to stay in a singlet form. Thus, the ground electronic state of Fischer ligands were singlet states instead of triplet states. However, for a Schrock ligand ($CH_2$), the energy of its triplet state was lower than its singlet states, meaning that triplet states was more stable for Schrock ligands. Therefore, the ground electronic state of Schrock ligands was triplet states. 
 
-\\
+The molecular orbital diagram of both $CH_2$ and $C(OMe)Me$ were shown in the \textbf{Figure x}. The Fischer carbene ligand $C(OMe)Me$ contained an enelctron donating group (EDG), which increase the energy of $\pi$-orbital. Thus, the difference between the energy of $\sigma$-donating orbital and $\pi$-accepting orbital was large (\textbf{data needed}), and the two electrons would both stay in the $\sigma$-donating orbital, which makes the Fischer ligand a singlet state. 
+The $\sigma$-donating orbital for $C(OMe)Me$ ligand was HOMO as shwon in \textbf{Figure x, (a)}, and the $\pi$-accepting orbital was LUMO as shown in \textbf{Figure x, (b)}.
+However, the Schrock carbene ligand $CH_2$ does not contained an EDG. Thus, the difference between the energy of $\sigma$-donating orbital and $\pi$-accepting orbital was small enough to allow the two electrons stay in both orbitals as the electron repulsion force might be larger than the energy gap between the two orbitals. Therefore, the Schrock ligand was a triplet state.The $\sigma$-donating orbital was HOMO-1  as shown in \textbf{Figrue x, (c)}, and the $\pi$-accepting orbital was HOMO as shown in \textbf{Figure x, (d)}. 
 
-\\
-\\
+As the Fischer carbene ligand was in a singlet state, the lone pair electrons were both in the HOMO orbital, which was $\sigma$ donating, while the empty LUMO was acting as $\pi$-accepting orbtial. A pair of electrons from the $\pi$-orbital of the metal donated to the empty LUMO orbital of the carbene ligand, forming the $\pi$ back-bonding as shown in the \textbf{Figure x}.
+The Schrock carbene ligand was in a triplet state, and one of the electron in the $\sigma$-orbital of the carbene ligand was paired with another electron from the metal, forming a $\sigma$ bond. The other electron in the $\pi$ orbital of the carbene ligand paired with another electrons from the $\pi$ orbital of the metal, forming a $\pi$ bonding as shown in the \textbf{Figure x}.
 
-\textbf{This again compares well with the experimental crystal structure of [Cr(CO)5(C(OMe)Ph)], which adopts this same geometry.}
+\begin{figure}[h!]
+      \centering
+      \includegraphics[width=0.95\columnwidth]{CH2 HOMO-1.png} %an example of how to make your figure a specific size (fraction of the width of the column), if you'd like it to span the column instead, delete the number before the \)
+      \vspace{2mm} %just an example of how space can be added if need be, replace with '\hspace' for horizontal padding
+      \caption{Same}
+\end{figure}
+
+
+The four different strucutres of $Ph(OMe)CCr(CO)_5$ were shown in \textbf{Figure x}, and their energy was recorded in Table 3. The syn-eclipsed form had the lowest structure, which means that it was the most stable structure. This was further proven by the experimental crystal structure of $[Cr(CO)_5(C(OMe)Ph)]$. The difference of energy between the syn-conformation and anti-conformation was large as comparing to the difference between the eclipsed structure and the staggered structure. This indicated that it was more difficult to transform from the syn-conformation to the anti-conformation, which proved the restricted rotation of C-Y (C-O) bond. The bond length of the C-O bond was \textbf{data needed}, which was between the length of a single bond (1.43 Å) and a double bond (1.23 Å) \textbf{reference needed}. This indicated that the C-O bond was a partial double bond, and the bond length of C-O was closer to a double bond rather than a single bond, indicating that the C-O bond had more double bond properties. Thus, $[Cr(CO)_5(C(OMe)Ph)]$ would prefer the left resonance structure as shown in \textbf{Figure x}.
+
+\begin{figure}[h!]
+      \centering
+      \includegraphics[width=0.95\columnwidth]{CH2 HOMO-1.png} %an example of how to make your figure a specific size (fraction of the width of the column), if you'd like it to span the column instead, delete the number before the \)
+      \vspace{2mm} %just an example of how space can be added if need be, replace with '\hspace' for horizontal padding
+      \caption{Same}
+\end{figure}
+
+The reaction from $Ph(OMe)CCr(CO)_5$ to $Ph(NH_2)CCr(CO)_5$ was shown in \textbf{Figure x}. The charge of the central carbon of Fischer carbene ligand was positive as shown in Table 4, meaning that it was electrophilic. When -OMe group was replaced by -$NH_2$ group, the electron density of the central carbon was increased as -$NH_2$ group was more electron donating than -OMe. For this reason, the charge of the central carbon became less positive, meaning it was less electrophilic and less reactive.
+
+\begin{figure}[h!]
+      \centering
+      \includegraphics[width=0.95\columnwidth]{CH2 HOMO-1.png} %an example of how to make your figure a specific size (fraction of the width of the column), if you'd like it to span the column instead, delete the number before the \)
+      \vspace{2mm} %just an example of how space can be added if need be, replace with '\hspace' for horizontal padding
+      \caption{Same}
+\end{figure}
+
+The reaction from $TaCp_2Me(CH_2)$ to $TaCp_2Me(CH_2)AlMe_3$ was shown in \textbf{Figure x}. For Schrock carbene, the charge of the central carbon become less negative, which indicates that the carbon become less nucleophilic when $AlMe_3$ was added to the central carbon. Therefore, the Schrock molecule was less reactive. 
+
+\begin{figure}[h!]
+      \centering
+      \includegraphics[width=0.95\columnwidth]{CH2 HOMO-1.png} %an example of how to make your figure a specific size (fraction of the width of the column), if you'd like it to span the column instead, delete the number before the \)
+      \vspace{2mm} %just an example of how space can be added if need be, replace with '\hspace' for horizontal padding
+      \caption{Same}
+\end{figure}
+
+This experiment was fully based on computational methods including "Molecular Mechanics" and "Semi-Empirical" methods using Spartan Student version8. The first part of this experiment calcualte the inversion activation energy of 16 different trigonal pyramidal molecules with N or P as the central atoms. The energy difference were explained by the nature of the central atom, the substituent effect, the steric effect, the conjugation effect, and the ring strain effect. The second part of the experiment was focused on carbene. The two types of carbene, Fischer (-C(OMe)Me) and Schrock (-$CH_2$), were analysed. The ground electronic state of a Fischer carbene was a singlet state due to the electon donating group -OMe, while the ground electronic state for Schrock carbene was triplet. The HOMO orbital containing the lone pair electrons of Fischer carbene acting as $\sigma$-donating orbital, while the empty LUMO ortbial acting as a $\pi$-accepting orbital. For a Schrock carbene, the HOMO-1 orbital containing one electron was the $\sigma$-donating orbital, while the other HOMO containing one electron acted as $\pi$ orbital. The C-O bond for the Fischer carbene had partial double bonds properties and its rotation was restricted. The charge of the central carbon of the Fischer carbene was positive, indicating that it was electrophilic, while the Schrock carbene was nucleophilic as the charge of its central carbon was negative. As this experiment was based on a computational calcualtion, further wet-lab experiment could be done to confirm the information obtianed by calculation.
+
+
+
+\textbf{brief conclusion and further work} 
 
 
 %Here is an example of a figure.
@@ -251,93 +338,113 @@ The molecular orbital diagram of both $CH_2$ and $C(OMe)Me$ were shown in the \t
 
 
 
+%Make use of figures and/or external references to support your discussion points. An example figure is shown above as Figure 1.
 
-\begin{figure}[h!]
-\centering
-\includegraphics[width=0.95\columnwidth]{CH2 HOMO-1.png} %an example of how to make your figure a specific size (fraction of the width of the column), if you'd like it to span the column instead, delete the number before the \)
-\vspace{2mm} %just an example of how space can be added if need be, replace with '\hspace' for horizontal padding
-\caption{Same}
-\end{figure}
+%The best discussion will also include a brief paragraph with conclusions (for each part of the experiment) and future work. Future work, in this case, refers to a brief discussion on the validity of your chosen method, and the justification of using computational methods for the purposes of this experiment. The best discussion will offer some suggestions on the improvement of the experimental design.
 
-Make use of figures and/or external references to support your discussion points. An example figure is shown above as Figure 1.
+%\textbf{Please use concise and scientific tone in your writing. Academic writing, by convention, uses the past tense and a passive voice. Try to emulate the style you see in textbooks/papers. Avoid the use of first (I/we) or second (you) person, informal language, overuse of conjunctions and pronouns (especially 'this/that'). Make sure to proofread and spellcheck your work before submitting!}
 
-The best discussion will also include a brief paragraph with conclusions (for each part of the experiment) and future work. Future work, in this case, refers to a brief discussion on the validity of your chosen method, and the justification of using computational methods for the purposes of this experiment. The best discussion will offer some suggestions on the improvement of the experimental design.
-
-\textbf{Please use concise and scientific tone in your writing. Academic writing, by convention, uses the past tense and a passive voice. Try to emulate the style you see in textbooks/papers. Avoid the use of first (I/we) or second (you) person, informal language, overuse of conjunctions and pronouns (especially 'this/that'). Make sure to proofread and spellcheck your work before submitting!}
-
-Again, if you aren't sure what is appropriate for academic writing, please consult the many guides available online, such as \href{https://libguides.reading.ac.uk/writing/style}{\textbf{this one}}
-
-
+%Again, if you aren't sure what is appropriate for academic writing, please consult the many guides available online, such as \href{https://libguides.reading.ac.uk/writing/style}{\textbf{this one}}
 
 
 
 \section{Investigation Question}
 
-Please include the write-up to your investigation question here. Include any relevant figures, sources, or background information, as instructed in your manual.
-\\
-The best Investigation Question will include:
-\\1) a short, relevant introduction to the problem,
-\\2) a clear and well-worded proposal of a solution (hypothesis), and 
-\\3) a concise and well-researched backing/explanation for the solution. 
+The efficiency of solar materials was largely depended on the band gap of the molecule. The band gap was the energy between valence band and conduction band \cite{investigation}, representing the minium energy required for the excitation of an electron to a higher energy level \cite{Bandgap2020}. The ideal band gap for a photovoltaic material was around 1.4 eV with an limiting efficiency around 33.7\% (Shockley–Queisser limit). \cite{Bandgap1961} 
 
-Use appropriate scientific language and make sure to properly reference all of your sources!
+A computational method could be used to select the potential photovoltaic material. The advantages of using the computational method include:
+
+1. It was much faster than the wet-lab experiment. Therefore, it could be used to screen a large number of molecules in a short time.
+
+2. The cost of computational methods was much lower than the wet-lab experiment as no chemicals were needed. 
+
+There were several methods could be used to calculate the band gap of a molecule. DFT could provide information about the structures and stabilities of photovoltaic materials in a relatively short time. However, it would greatly underestimate the band gap. While GW could provide accurate information about molecules but facing some challenges including spin-orbital coupling effects and a high computational cost. Thus, the most suitable method was DFT-1/2, which could model the band gap with and accuracy close to the GM method and had a lower cost similar to DFT method. DFT-1/2 had been proved that it could calculate the band energy of metal halide perovskites $AMX_3$, while $A=Cs, CH_3NH_3, CH_2NHCH_2, M=Sn, Pb; X=I, Br, Cl$, with high accuracy. 
+
+To select the new potential solar materials, the band energy of possible candidates could be calculate using DFT-1/2 method. For example, each component of metal halide perovskites, A/M/X, could be changed, and the band gap would be calcualted for each molecule. The molecule with the band gap close to 1.4 eV would be selected, and further analysis would be required for these molecules to determine if it was a suitable solar materials. 
+
+The solar materials selected by using the computational method might not be suitable for industrial for several reasons:
+
+1. The experimental data might be different from computational calculation.
+
+2. The material selected might be rare in nature.
+
+3. The cost of producing the material might be high.
+
+4. The process of producing this material might be harmful to the environment. 
+
+Therefore, once the solar materials were selected based on the computational calculation, further wet-lab experiments were necessary to ensure that it was suitable for industrial. 
+
+
+
+
+
+
+
+% Please include the write-up to your investigation question here. Include any relevant figures, sources, or background information, as instructed in your manual.
+% \\
+% The best Investigation Question will include:
+% \\1) a short, relevant introduction to the problem,
+% \\2) a clear and well-worded proposal of a solution (hypothesis), and 
+% \\3) a concise and well-researched backing/explanation for the solution. 
+
+%Use appropriate scientific language and make sure to properly reference all of your sources!
 
 \vspace{8mm}
 \hrule
 
 %% THE FOLLOWING SECTIONS CONTAIN SOME ADDITIONAL INFORMATION FOR YOUR CONVENIENCE, MAKE SURE TO REMOVE THEM FROM YOUR OWN REPORT %%
 
-\section*{Note on the Citation} %Delete this section in your own report
-All sources should be formatted in the Royal Society of Chemistry (RSC) referencing style \cite{Example}. If you don't know what this means, I strongly recommend reviewing how citation and referencing works in general, and looking into the style guides for the RSC style in particular. 
+% \section*{Note on the Citation} %Delete this section in your own report
+%All sources should be formatted in the Royal Society of Chemistry (RSC) referencing style \cite{Example}. If you don't know what this means, I strongly recommend reviewing how citation and referencing works in general, and looking into the style guides for the RSC style in particular. 
 %more info at https://edu.rsc.org/download?ac=14556  
 
-If you use a different referencing style (MLA, Harward, etc.) please indicate so in a footnote\footnote{Example on how to format a footnote in \LaTeX{}} of your citation section, so that the demonstrator marking your work knows that you've used something different and can check it for errors!
+%If you use a different referencing style (MLA, Harward, etc.) please indicate so in a footnote\footnote{Example on how to format a footnote in \LaTeX{}} of your citation section, so that the demonstrator marking your work knows that you've used something different and can check it for errors!
 
-With Overleaf, you can simply import a .bib file into your file tree (the panel on the left-most side of your screen) and the bibliography command will automatically compile them for you. Please make sure to include relevant in-text references using the \textbackslash cite command.
-The \textbackslash printbibliography command will then generate the proper references section for you!
+%With Overleaf, you can simply import a .bib file into your file tree (the panel on the left-most side of your screen) and the bibliography command will automatically compile them for you. Please make sure to include relevant in-text references using the \textbackslash cite command.
+%The \textbackslash printbibliography command will then generate the proper references section for you!
 
-.bib file can be easily obtained using a reference-management software. If you don't know what this is, or don't yet use one, I \textbf{strongly} recommend looking into one! Personally, I use \href{https://www.mendeley.com/reference-management/reference-manager}{Mendeley}, which has both a desktop version and a browser plug-in — this enables you to add references as you browse/research. If you learn how to use a reference management software now, it will save you tons of time later on; while you're writing your thesis, or other works in the future.
+%.bib file can be easily obtained using a reference-management software. If you don't know what this is, or don't yet use one, I \textbf{strongly} recommend looking into one! Personally, I use \href{https://www.mendeley.com/reference-management/reference-manager}{Mendeley}, which has both a desktop version and a browser plug-in — this enables you to add references as you browse/research. If you learn how to use a reference management software now, it will save you tons of time later on; while you're writing your thesis, or other works in the future.
 
-Further guidelines on referencing in LaTeX can be found here:
-\url{https://www.overleaf.com/learn/latex/Bibliography\_management\_in\_LaTeX}
+%Further guidelines on referencing in LaTeX can be found here:
+%\url{https://www.overleaf.com/learn/latex/Bibliography\_management\_in\_LaTeX}
 
-\section*{Tips and Tricks} %make sure to delete this from your report!!
+%\section*{Tips and Tricks} %make sure to delete this from your report!!
 
-\LaTeX{} is a widely used compiler, there are hundreds of tutorial articles and videos online - please make use of them! Google is your friend, you need only ask.
+%\LaTeX{} is a widely used compiler, there are hundreds of tutorial articles and videos online - please make use of them! Google is your friend, you need only ask.
 
 % Sidenote from Angie: I'm (a bit) sorry for bullying you with Overleaf and LaTeX coding, but I promise if you give it a chance, you'll learn to love it :) it's very useful for writing larger pieces of academic writing ⁠— such as your future thesis! Plus, it is another shiny, new skill to spruce up your future CVs.
 
-\subsection*{How to write Mathematics} %make sure to delete this from your report
+%\subsection*{How to write Mathematics} %make sure to delete this from your report
 
-\LaTeX{} is great at typesetting mathematics. Let $X_1, X_2, \ldots,
-X_n$ be a sequence of independent and identically distributed random
-variables with $\text{E}[X_i] = \mu$ and $\text{Var}[X_i] = \sigma^2 <
-\infty$, and let
-\[S_n = \frac{X_1 + X_2 + \cdots + X_n}{n}
-      = \frac{1}{n}\sum_{i}^{n} X_i\]
-denote their mean. Then as $n$ approaches infinity, the random
-variables $\sqrt{n}(S_n - \mu)$ converge in distribution to a normal
-$\mathcal{N}(0, \sigma^2)$.
+%\LaTeX{} is great at typesetting mathematics. Let $X_1, X_2, \ldots,
+% X_n$ be a sequence of independent and identically distributed random
+% variables with $\text{E}[X_i] = \mu$ and $\text{Var}[X_i] = \sigma^2 <
+% \infty$, and let
+% \[S_n = \frac{X_1 + X_2 + \cdots + X_n}{n}
+%       = \frac{1}{n}\sum_{i}^{n} X_i\]
+% denote their mean. Then as $n$ approaches infinity, the random
+% variables $\sqrt{n}(S_n - \mu)$ converge in distribution to a normal
+% $\mathcal{N}(0, \sigma^2)$.
 
-\subsection*{How to add Lists} %make sure to delete this from your report
+% \subsection*{How to add Lists} %make sure to delete this from your report
 
-You can make lists with automatic numbering \dots
+% You can make lists with automatic numbering \dots
 
-\begin{enumerate} %for numbered list
-\item Like this,
-\item and like this.
-\end{enumerate}
-\dots or like this, \dots
-\begin{itemize} %for bullet points
-\item Like this,
-\item and like this.
-\end{itemize}
+% \begin{enumerate} %for numbered list
+% \item Like this,
+% \item and like this.
+% \end{enumerate}
+% \dots or like this, \dots
+% \begin{itemize} %for bullet points
+% \item Like this,
+% \item and like this.
+% \end{itemize}
 
 
 %% I M P O R T A N T %%
 %%!!!REFERENCES -- REVIEW FOR YOUR OWN REPORT!!!%%
 
-\bibliography{example_refs} %This command generates your bibliography. PLEASE MAKE SURE TO CHANGE THE NAME IN THESE CURLY BRACKETS TO WHATEVER YOUR .BIB FILE IS CALLED!!
+\bibliography{reference} %This command generates your bibliography. PLEASE MAKE SURE TO CHANGE THE NAME IN THESE CURLY BRACKETS TO WHATEVER YOUR .BIB FILE IS CALLED!!
 \bibliographystyle{rsc} %setting for the RSC's .bst (style) file -- do NOT change this, unless you wish to define a new citation style
 
 \end{document}
