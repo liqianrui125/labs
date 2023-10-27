@@ -11,6 +11,8 @@
 
 %~~~~~~~ Packages ~~~~~~~~~%
 % Please don't be scared by the chunk of code below, these are just some handy tools that make using LaTeX easier, you can read more on your own time, for example here: https://www.latex-tutorial.com/tutorials/packages/
+\usepackage{gensymb}
+\usepackage{makecell}
 \usepackage[utf8]{inputenc} %helps interpret unicode, non ASCII characters
 \usepackage[T1]{fontenc} %makes font compatible with more non-ASCII characters
 \usepackage[english]{babel} %allows the use of special characters and also translates some elements within the document. This package also automatically activates the appropriate hyphenation rules for the language you choose
@@ -75,9 +77,9 @@
 \vspace{-0.3in}
 \section*{Abstract}
 {\large 
-This experiment was based on computational methods including "Molecular Mechanics" and "Semi-Empirical" since the eneryg of a molecule was hard to determine through wet-lab experiments. 
-The inversion activation energy of 16 different trigonal pyramidal molecules with N or P as the central atom was obtained. The difference among the activation energies was disccussed based on the nature of the central atom, the substituent effect, the steric effect, the conjugation effect, and the ring strain effect.
-The properties of two types of carbene ligand, Fishcer and Schrock, were studied. The ground electronic state, the electron ortbials, the partial double bond properties of C-Y bond in Fischer carbene, and the reactivity of both types of carbene were disccussed based on the computational calcualtion. Further relative wet-lab experiment could be process to support the computational calcualted results.
+This experiment was based on computational methods including "Molecular Mechanics" and "Semi-Empirical" since the energy of a molecule was hard to determine through wet-lab experiments. 
+The inversion activation energy of 16 different trigonal pyramidal molecules with N or P as the central atom was obtained. The difference among the activation energies was discussed based on the nature of the central atom, the substituent effect, the steric effect, the conjugation effect, and the ring strain effect.
+The properties of two types of carbene ligands, Fischer and Schrock, were studied. The ground electronic state, the electron orbitals, the properties of the C-Y bond in Fischer carbene, and the reactivity of both types of carbene were discussed based on the computational calculations. Some further relative wet-lab experiments could be processed to support the computational calculated results.
 
 %A good abstract should include a clear statement of the experimental aim, some significant data points presented correctly, as well as a concise summary of trends and observations concerning your data. A great abstract will mention the specific methods used and the validity/level of error in the presnted data.
 
@@ -91,24 +93,24 @@ The properties of two types of carbene ligand, Fishcer and Schrock, were studied
 
 \section{Introduction} % example of a heading
 
-The inversion of the pyramidal centres of a molecule like amine was very fast, which would results in racemic mixture. The energy barrier of the inversion of a pyramidal centre is called the activation energy of inversion ($E_a$) as shown in Figure 1. During the transition state of the inversion, the $sp^3$ orbital changed to $sp^2$ orbital. The activation energy of inversion is related to the nature of the central atom, the substituent effect, the steric effect, the conjugation effect, and the ring strain effect, which would be disccussed in this experiment through a computational method.
+The inversion of the pyramidal cneters of a molecule like an amine was very fast, which would result in a racemic mixture. The energy barrier of the inversion of a pyramidal center is called the activation energy of inversion ($E_a$) as shown in Figure 1. During the transition state of the inversion, the $sp^3$ orbital changed to $sp^2$ orbital. The activation energy of inversion is related to the nature of the central atom, the substituent effect, the steric effect, the conjugation effect, and the ring strain effect, which would be disccussed in this experiment through a computational method.
 
 \begin{figure}[h!]
       \centering
-      \includegraphics[width=0.95\columnwidth]{CH2 HOMO-1.png} %an example of how to make your figure a specific size (fraction of the width of the column), if you'd like it to span the column instead, delete the number before the \)
+      \includegraphics[width=0.95\columnwidth]{inversion.png} %an example of how to make your figure a specific size (fraction of the width of the column), if you'd like it to span the column instead, delete the number before the \)
       \vspace{2mm} %just an example of how space can be added if need be, replace with '\hspace' for horizontal padding
-      \caption{Same}
+      \caption{Energy diagram of the inversion of a trigonal pyramidal molecule $ER_3$.\cite{Part1}}
 \end{figure}
 
 A carbene ligand was a -$CR_2$ group with two non-bonding electrons. There were two types of carbene: Fsicher and Schrock as shown in Figure 2. The molecular orbitals, bond properties, and reactivity of these two types of carbene would be disccussed based on computational method. 
 \begin{figure}[h!]
       \centering
-      \includegraphics[width=0.95\columnwidth]{CH2 HOMO-1.png} %an example of how to make your figure a specific size (fraction of the width of the column), if you'd like it to span the column instead, delete the number before the \)
+      \includegraphics[width=0.95\columnwidth]{carbenenew.png} %an example of how to make your figure a specific size (fraction of the width of the column), if you'd like it to span the column instead, delete the number before the \)
       \vspace{2mm} %just an example of how space can be added if need be, replace with '\hspace' for horizontal padding
-      \caption{Same}
+      \caption{The structure of two types of carbene: Fishcer and Schrock.\cite{Montgomery}}
 \end{figure}
 
-The Computational method was used in this experiment as the energy of a molecule could not be detected directly through a wet-lab experiment. The first method used was "Molecular Mechanics" method, which was based on empirical potential energy functions.\cite{MMFF1} It calcualted the molecular energy and predited the most stable strucutre of the molecule.\cite{MMFF2} This method was relatively simple and fast, which would save time for the next method. The second method used was "Semi-Empirical" method, which was more accurate but would take a much longer time. This method was based on the quantum mechanics, and it would calculate the energy of the molecule, electron density, and molecular orbitals. 
+The Computational method was used in this experiment as the energy of a molecule could not be detected directly through a wet-lab experiment. The first method used was the "Molecular Mechanics" method, which was based on empirical potential energy functions.\cite{MMFF1} It calculated the molecular energy and predicted the most stable structure of the molecule.\cite{MMFF2} This method was relatively simple and fast, which would save time for the next method. The second method used was the "Semi-Empirical" method, which was more accurate but would take a much longer time. This method was based on quantum mechanics, and it would calculate the energy of the molecule, electron density, and molecular orbitals. 
 
 
 %Ideally, your introduction should include a concise summary of the chemistry background for the experiment; an explanation of any key terms and concepts should be given. Aim to include \textbf{any and all} information you may need to mount a solid, well-backed discussion section. In-text references and good usage of literature sources are both crucial for a good introduction.
@@ -123,9 +125,9 @@ The Computational method was used in this experiment as the energy of a molecule
 
 Since the energy value was impossible to be measured experimentally, the computational method was used in the experiment to obtain the molecular energy. 
 
-Trimethylamine was built via Spartan Student version8. It was optimised using "Equilibrium Geometry" and "Molecular Mechanics" (MMFF). This calculation was repeated using "Semi-Empirical" (PM3) instead of MMFF to obtain more accurate properties about the molecule. The energy and dihedrals of the molecule were recorded. Trimethylamine was constrained to a planar by constraining the dihedral angle to 180 degrees. The planar $NH_3$ was optimised with the same method. The energy of the planar $NH_3$ was recorded. These steps were repeated with different molecules: $PMe_3$, $N^iPr_3$, $P^iPr_3$, $PBr_3$, $PCl_3$, $PF_3$, $PPhMe_2$, $PPhMe^tBu$, $P(C_6H_{11})Me^nPr$, $PPhMe^nPr$, $PPhMe(4-MePh)$, $PPhMe(SiH_3)$, $PPh^iPr^tBu$, $PPh^iPr^tBu$, $(H_2CCH_2)NMe$.
+Trimethylamine was built via the Spartan Student version 8. It was optimised using "Equilibrium Geometry" and "Molecular Mechanics" (MMFF). This calculation was repeated using "Semi-Empirical" (PM3) instead of MMFF to obtain more accurate properties about the molecule. The energy and dihedrals of the molecule were recorded. Trimethylamine was constrained to a planar by constraining the dihedral angle to 180 degrees. The planar $NH_3$ was optimised with the same method. The energy of the planar $NH_3$ was recorded. These steps were repeated with different molecules: $PMe_3$, $N^iPr_3$, $P^iPr_3$, $PBr_3$, $PCl_3$, $PF_3$, $PPhMe_2$, $PPhMe^tBu$, $P(C_6H_{11})Me^nPr$, $PPhMe^nPr$, $PPhMe(4-MePh)$, $PPhMe(SiH_3)$, $PPh^iPr^tBu$, $PPh^iPr^tBu$, $(H_2CCH_2)NMe$.\\[1\baselineskip]
 
-Triplet carbene ligand (-C(OMe)Me) was built and optimised using MMFF first followed by PM3 method with "Equilibrium Geometry". This step was repeated with Singlet (-C(OMe)Me), Triplet (-$CH_2$), Singlet(-$CH_2$). The energy of triplet states and Singlet states for each carbene ligand were compared to determine the ground electronic state of Fischer (-C(OMe)Me) and Schrock (-$CH_2$) structure. The molecular orbitals of -C(OMe)Me and -$CH_2$ were obtained, and the energy of the $\sigma$-donating and $\pi$-accepting orbitals were recorded. 
+Triplet carbene ligand (-$C(OMe)Me$) was built and optimised using MMFF first followed by the PM3 method with "Equilibrium Geometry". This step was repeated with Singlet (-$C(OMe)Me$), Triplet (-$CH_2$), Singlet(-$CH_2$). The energy of triplet states and Singlet states for each carbene ligand were compared to determine the ground electronic state of Fischer (-$C(OMe)Me$) and Schrock (-$CH_2$) structure. The molecular orbitals of -$C(OMe)Me$ and -$CH_2$ were obtained, and the energy of the $\sigma$-donating and $\pi$-accepting orbitals were recorded. 
 
 Four different structures of $Ph(OMe)CCr(CO)_5$ - (syn, eclipsed), (syn, staggered), (anti, eclipsed), and (anti, stagered) - were built and optimised. Their energy were compared to determine the stablest structure. The C-O bond distance and the electrostatic of the central carbon were recorded. 
 
@@ -136,75 +138,79 @@ $Ph(NH_2)CCr(CO)_5$, $TaCp_2Me(CH_2)$, and $TaCp_2Me(CH_2)AlMe_3$ were built and
 
 \section{Results}
 
-The ground state energy, the energy after constrained to a planar, and the dihedral angles of $NMe_3$, $PMe_3$, $N^iPr_3$, $P^iPr_3$, $PBr_3$, $PCl_3$, $PF_3$, $PPhMe_2$, $PPhMe^tBu$, $P(C_6H_{11})Me^nPr$, $PPhMe^nPr$, $PPhMe(4-MePh)$, $PPhMe(SiH_3)$, $PPh^iPr^tBu$, $PPh^iPr^tBu$, $(H_2CCH_2)NMe$  were recorded in Table 1. The activation energy of inversion for a molecule was calculated by subtracting the ground state energy from the energy of planar, and the result was recorded in Table 1. 
+The ground state energy, the energy after constrained to a planar, and the dihedral angles of $NMe_3$, $PMe_3$, $N^iPr_3$, $P^iPr_3$, $PBr_3$, $PCl_3$, $PF_3$, $PPhMe_2$, $PPhMe^tBu$, $P(C_6H_{11})Me^nPr$, $PPhMe^nPr$, $PPhMe(4-MePh)$, $PPhMe(SiH_3)$, $PPh^iPr^tBu$, $PPh^iPr^tBu$, $(H_2CCH_2)NMe$  were recorded in Table 1. The activation energy of inversion for a molecule was calculated by subtracting the ground state energy from the energy of the planar, and the result was recorded in Table 1. 
 
 \begin{table}[h] 
-\caption{Energy of each molecule in the ground state (E), and the energy of the molecule when it constrained to a planar (E') were recorded. The activation energy of inversion ($E_a$).}
-\begin{tabular}{L{.7in}C{.7in}C{.7in}C{.7in}}\toprule
- Name of the Molecules & E (kJ/mol) & E' (kJ/mol) & $E_a$ (kJ/mol)\\\midrule
-Line 1 & 68.28 & 45.30 & 56.79 \\
-Line 1 & 68.28 & 45.30 & 56.79 \\
-Line 1 & 68.28 & 45.30 & 56.79 \\
-Line 1 & 68.28 & 45.30 & 56.79 \\
-Line 1 & 68.28 & 45.30 & 56.79 \\
-Line 1 & 68.28 & 45.30 & 56.79 \\
-Line 1 & 68.28 & 45.30 & 56.79 \\
-Line 1 & 68.28 & 45.30 & 56.79 \\
-Line 1 & 68.28 & 45.30 & 56.79 \\
-Line 1 & 68.28 & 45.30 & 56.79 \\
-Line 1 & 68.28 & 45.30 & 56.79 \\
-Line 2 & 54.06 & 38.63 & 46.35 \\\midrule %this is just an example on how to include an extra line, you can remove it if you do not need it
-Line 3 & 61.17 & 41.97 & \\\bottomrule
+\caption{Energy of each molecule in the ground state (E), and the energy of the molecule when it constrained to a planar (E'), the activation energy of inversion ($E_a$), and the dihedrals were recorded.}
+\begin{tabular}{L{.6in}C{.6in}C{.6in}C{.6in}C{.6in}}\toprule
+ %Name of the Molecules & E (kJ/mol) & E' (kJ/mol) & $E_a$ (kJ/mol)\\\midrule
+ Name of the molecule & E (kJ/mol) & E' (kJ/mol) & $E_a$ (kJ/mol) & dihedrals (°) \\\midrule
+ $NMe_3$          & -45.47     & -10.31      & 35.16  & 127.78        \\
+ $PMe_3$          & -124.8     & 28.54       & 153.34 & 103.09        \\
+ $N^iPr_3$         & -160.14    & -151.8      & 8.34   & -135.59       \\
+ $P^iPr_3$         & -178.89    & -42.46      & 136.43 & 106.18        \\
+ $PBr_3$          & -117.84    & 121.61      & 239.45 & -104.15       \\
+ $PCl_3$          & -370.16    & -113.67     & 256.49 & 101.67        \\
+ $PF_3$           & -1055.09   & -535.75     & 519.34 & -96.48        \\
+ $PPhMe_2$        & 67.07      & 189.36      & 122.29 & 104.91        \\
+ $PPhMe^tBu$      & 18.27      & 154.6       & 136.33 & -106.76       \\
+ \begin{tabular}[c]{@{}l@{}}$P(C_6H_{11})-$\\ $Me^nPr$\end{tabular} & -202.93    & -88.8       & 114.13 & 103.58        \\
+ $PPhMe^nPr$      & 13.24      & 157.14      & 143.9  & 104.74        \\
+ \begin{tabular}[c]{@{}l@{}}$PPhMe-$\\ $(4-MePh)$\end{tabular} & 172.38     & 308.89      & 136.51 & 105.96        \\
+\begin{tabular}[c]{@{}l@{}}$PPhMe-$\\ $(SiH_3$)\end{tabular}   & 111.37     & 188.04      & 76.67  & -105.6        \\
+ $PPh^iPr^tBu$     & 1.76       & 130.92      & 129.16 & 109.1         \\
+ \begin{tabular}[c]{@{}l@{}}$PPh^iPr-$\\ $(SiMe_3)$\end{tabular} & -101.35    & -32.67      & 68.68  & -106.5        \\
+\begin{tabular}[c]{@{}l@{}}$(H_2CCH_2)-$\\ $NMe$\end{tabular}   & 111.32     & 201.98      & 90.66  & 109.19      \\\bottomrule
 
 \end{tabular}
 \end{table}
 
 
 
-The energy of Fischer (-C(OMe)Me) and Schrock (-$CH_2$) in both Triplet states and Singlet states were recorded in Table 2. 
+The energy of Fischer (-$C(OMe)Me$) and Schrock (-$CH_2$) in both Triplet states and Singlet states were recorded in Table 2. 
 
 
 \begin{table}[h]
 \caption{The energy of Fischer and Schrock carbene ligand in triplet and singlet state.}
 \begin{tabular}{L{1.0in}C{1.0in}C{1.0in}}\toprule
 Name of the molecules & E (Triplet) (kJ/mol) & E (Singlet) (kJ/mol)\\ \hline
--C(OMe)Me             & 51.41         & 14.56         \\
--CH2                  & 299.72        & 473.74    \\\bottomrule   
+-$C(OMe)Me$             & 51.41         & 14.56         \\
+-$CH_2$                  & 299.72        & 473.74    \\\bottomrule   
 \end{tabular}
 \end{table}
 
 
-The $\sigma$-donating and $\pi$-accepting orbital of Fishcer (-C(OMe)Me) and Schrock (-$CH_2$) carbene ligand were shown in \textbf{Figrue x}. The energy of the HOMO for -C(OMe)Me was -9.1 eV and LUMO was 0.5 eV. The energy of HOMO for -$CH_2$ was -10.4eV and HOMO-1 was 11.5 eV. 
+The $\sigma$-donating and $\pi$-accepting orbital of Fishcer (-$C(OMe)Me$) and Schrock (-$CH_2$) carbene ligand were shown in Figure 3-6. The energy of the HOMO for -C(OMe)Me was -9.1 eV and LUMO was 0.5 eV. The energy of HOMO for -$CH_2$ was -10.4eV and HOMO-1 was -11.5 eV. 
 
 \begin{figure}[h!]
       \centering
       \includegraphics[width=0.95\columnwidth]{C(OMe)Me HOMO white background.png} %an example of how to make your figure a specific size (fraction of the width of the column), if you'd like it to span the column instead, delete the number before the \)
       \vspace{2mm} %just an example of how space can be added if need be, replace with '\hspace' for horizontal padding
-      \caption{Same}
+      \caption{The HOMO of -$C(OMe)Me$.}
 \end{figure}
 
 \begin{figure}[h!]
       \centering
       \includegraphics[width=0.95\columnwidth]{C(OMe)Me LUMO white.png} %an example of how to make your figure a specific size (fraction of the width of the column), if you'd like it to span the column instead, delete the number before the \)
       \vspace{2mm} %just an example of how space can be added if need be, replace with '\hspace' for horizontal padding
-      \caption{Same}
+      \caption{The LUMO of -$C(OMe)Me$.}
 \end{figure}
 
 \begin{figure}[h!]
       \centering
       \includegraphics[width=0.95\columnwidth]{CH2 HOMO-1.png} %an example of how to make your figure a specific size (fraction of the width of the column), if you'd like it to span the column instead, delete the number before the \)
       \vspace{2mm} %just an example of how space can be added if need be, replace with '\hspace' for horizontal padding
-      %\caption{Same}
+      \caption{The HOMO-1 (HOMO with lower energy) of -$CH_2$.}
 \end{figure}
 
 \begin{figure}[h!]
       \centering
       \includegraphics[width=0.95\columnwidth]{CH2 HOMO.png} %an example of how to make your figure a specific size (fraction of the width of the column), if you'd like it to span the column instead, delete the number before the \)
       \vspace{2mm} %just an example of how space can be added if need be, replace with '\hspace' for horizontal padding
-      \caption{Same}
+      \caption{The HOMO (HOMO with higher energy) of -$CH_2$.}
 \end{figure}
 
-The energy and C-O bond length of $Ph(OMe)CCr(CO)_5$ in four different structures were recorded in Table 3. The syn-conformation had lower energy than the anti-conformation, and the eclipsed form had lower energy than the staggered form. The syn-eclipsed structure had the lowest energy, meaning that the molecule was most stable under this structure. \textbf{data needed}
+The energies of $Ph(OMe)CCr(CO)_5$ in four different structures were recorded in Table 3. The syn-conformation had lower energy than the anti-conformation, and the eclipsed form had lower energy than the staggered form. The syn-eclipsed structure had the lowest energy, meaning that the molecule was most stable under this structure. The C-O bond length of $Ph(OMe)CCr(CO)_5$ with syn-eclipsed structure was 1.340 Å.
 
 \begin{table}[h]
 \caption{The energy of  $Ph(OMe)CCr(CO)_5$ in four different structures}
@@ -215,16 +221,16 @@ Staggered    & -772.83 kJ/mol & -755.68 kJ/mol \\\bottomrule
 \end{tabular}
 \end{table}
 
-The charge of the central carbon of $Ph(OMe)CCr(CO)_5$, $Ph(NH_2)CCr(CO)_5$, $TaCp_2Me(CH_2)$, and $TaCp_2Me(CH_2)AlMe_3$ were recorded in Table 4. For Fischer carbene (-C(OMe)Me) molecule, the charge of the central carbon was less positive as the -OMe group was replaced by -$NH_2$ group. For Schrock (-$CH_2$) carbene, the charge of the central carbon become less negative when $AlMe_3$ was added to the central carbon. 
+The charge of the central carbon of $Ph(OMe)CCr(CO)_5$, $Ph(NH_2)CCr(CO)_5$, $TaCp_2Me(CH_2)$, and $TaCp_2Me(CH_2)AlMe_3$ were recorded in Table 4. For the Fischer carbene (-C(OMe)Me) molecule, the charge of the central carbon was less positive as the -OMe group was replaced by the -$NH_2$ group. For Schrock (-$CH_2$) carbene, the charge of the central carbon became less negative when $AlMe_3$ was added to the central carbon. 
 
 \begin{table}[h]
 \caption{The charge of the central carbon of Fischer and Schrock carbenes}
 \begin{tabular}{L{1.5in}C{1.5in}}\toprule
 Name of the molecules  & electrostatic (eV)    \\ \hline
-$Ph(OMe)CCr(CO)_5$    &  \\
-$Ph(NH_2)CCr(CO)_5$     &  \\
-$TaCp_2Me(CH_2)$     &  \\
-$TaCp_2Me(CH_2)AlMe_3$ & \\\bottomrule
+$Ph(OMe)CCr(CO)_5$    &  0.641\\
+$Ph(NH_2)CCr(CO)_5$     &  0.278\\
+$TaCp_2Me(CH_2)$     & -0.969 \\
+$TaCp_2Me(CH_2)AlMe_3$ & -0.815\\\bottomrule
 \end{tabular}
 \end{table}
 
@@ -257,76 +263,134 @@ $TaCp_2Me(CH_2)AlMe_3$ & \\\bottomrule
 
 \section{Discussion}
 \textbf{Part 1}
+\\[1\baselineskip]
+The inversion activation energies of trigonal pyramidal molecules were related to dihedrals as shown in Table 1. Larger dihedral angles resulted in lower inversion activation energy, such as $NMe_3$ and $N^iPr_3$. This was because, during the process of inversion, the dihedral angles were constrained to 180\textdegree, meaning that if the dihedrals were close to 180\textdegree, less energy would be needed changing from a trigonal pyramidal to a trigonal planar transition state.\\[1\baselineskip]
 
-The activation energy needed for inversion varies among different molecules. 
+The energy of $NMe_3$ was much lower than the energy of $PMe_3$ because the inversion center was different. The molecule with N as the central of inversion had lower activation energy, meaning that the inversion of $NMe_3$ was quick. However, the $PMe_3$ had a much higher inversion activation energy, indicating that the inversion of $PMe_3$ was slow and the molecule in the transition state was able to be isolated. This was further proved by the large difference of the inversion activation energy of $N^iPr_3$ and $P^iPr_3$. \\[1\baselineskip]
 
-1. Nature of the central atom\\
-$N^iPr_3$ vs. $P^iPr_3$\\
+The inversion activation energy of $PBr_3$, $PCl_3$, and $PF_3$ was increasing due to the substituent effect. From $PBr_3$, $PCl_3$, to $PF_3$, the s character on the lone pair orbital increased. Since the lone pair changed from $sp^3$ orbital to p orbital during the transition state, the increasing s character would destabilise the transition state, which explained the trend of the inversion activation energy for these molecules. \\[1\baselineskip]
 
-2. Substituent Effect\\
-$PBr_3$ vs. $PF_3$ vs. $PCl_3$\\
+The steric effect was demonstrated by comparing ($NMe_3$ and $N^iPr_3$), ($PMe_3$ and $P^iPr_3$), and ($PPhMe_2$ and $PPhMe^tBu$). The repulsion due to the steric would unstable the trigonal pyramidal structure, meaning that it would be more likely to form a trigonal planar structure to reduce the steric effect. Therefore, the inversion activation energy would be lower for more steric molecules. \\[1\baselineskip]
 
-3. Steric effect\\
-$PPhMe_2$ vs. $PPhMe^tBu$\\
+The activation energy of $PPhMe(4-MePh)$  was smaller than that of $PPhMe^nPr$ due to the conjugation effects. The benzene ring could help stabilise the transition state as the lone pair electron could resonate through the benzene ring. Therefore, the activation energy would be lower if there were more conjugation. $PPhMe(4-MePh)$ contained two benzene rings, which results in lower inversion activation energy. \\[1\baselineskip]
 
-4. Conjugation effects\\
-$P(C_6H_11)Me^nPr$ vs. $PPhMe^nPr$\\
+The inversion activation energy of $(H_2CCH_2)NMe$ was significantly greater than $NMe_3$ because the ring strain effect for $(H_2CCH_2)NMe$. The ring strain was especially great in the trigonal planar structure because the bond angle of the ring was 60\textdegree, while in the trigonal planar structure, the bond angle would tend to be 120\textdegree. The trigoanl planar transition state would be destabilised, the energy for the transition state would increase. Thus, the activation energy for $(H_2CCH_2)NMe$ would be much higher than $NMe_3$, which did not have any ring strain effect. \\[1\baselineskip]
 
-5. Ring strain effects\\
+The computational calculated data in this experiment were compared to the literature values as shown in Table 5. The computational calculations were similar to the literature values, meaning that the calculated results were reliable. The trends discussed above were also consistent with the literature values. \\[3\baselineskip]
+
+\begin{table}[h] 
+      \caption{The computational results of the inversion activation energy were compared to the literature values.}
+      \begin{tabular}{L{1.0in}C{1.0in}C{1.0in}}\toprule
+       %Name of the Molecules & E (kJ/mol) & E' (kJ/mol) & $E_a$ (kJ/mol)\\\midrule
+       Name of the molecule & $E_{a.Cal}$ (kJ/mol) & $E_{a.Lit}$ (kJ/mol)  \\\midrule
+       $NMe_3$          & 35.2  & 34.7\cite{NMe3}     \\
+       $PMe_3$          & 153.3 & 185.6\cite{Lit1}       \\
+       $N^iPr_3$         & 8.3   & 5.9\cite{Lit1}       \\
+       $P^iPr_3$         & 136.4 & 139.5\cite{Lit1}       \\
+       $PBr_3$          & 239.5 & 204.0\cite{PX3}     \\
+       $PCl_3$          & 256.5 & 244.1\cite{PX3}        \\
+       $PF_3$           & 519.3 & 364.1\cite{PX3}        \\
+       $PPhMe_2$        & 122.3 & -       \\
+       $PPhMe^tBu$      & 136.3 & 136.8\cite{Lit2}        \\
+       \begin{tabular}[c]{@{}l@{}}$P(C_6H_{11})-$\\ $Me^nPr$\end{tabular} & 114.1 & 149.0\cite{Lit2}         \\
+       $PPhMe^nPr$      & 143.9  & 134.3\cite{Lit2}        \\
+       \begin{tabular}[c]{@{}l@{}}$PPhMe-$\\ $(4-MePh)$\end{tabular} & 136.51 & 126.8\cite{Lit2}         \\
+      \begin{tabular}[c]{@{}l@{}}$PPhMe-$\\ $(SiH_3$)\end{tabular}   & 76.67  & -         \\
+       $PPh^iPr^tBu$     & 129.16 & -       \\
+       \begin{tabular}[c]{@{}l@{}}$PPh^iPr-$\\ $(SiMe_3)$\end{tabular} & 68.68  & 79.1\cite{Lit3}        \\
+      \begin{tabular}[c]{@{}l@{}}$(H_2CCH_2)-$\\ $NMe$\end{tabular}  & 90.66  & 79.5\cite{Lit4}     \\\bottomrule
+      
+      \end{tabular}
+      \end{table}
+
+
+% 1. Nature of the central atom\\
+% $N^iPr_3$ vs. $P^iPr_3$\\
+
+% 2. Substituent Effect\\
+% $PBr_3$ vs. $PF_3$ vs. $PCl_3$\\
+
+% 3. Steric effect\\
+% $PPhMe_2$ vs. $PPhMe^tBu$\\
+
+% 4. Conjugation effects\\
+% $P(C_6H_11)Me^nPr$ vs. $PPhMe^nPr$\\
+
+% 5. Ring strain effects\\
 
 
 
 \textbf{Part 2}
 
-The energy of a triplet Fischer ligand ($C(OMe)Me$) was higher than the energy of its singlet form as shown in \textbf{Table x}, meaning that it was more stable for a Fischer molecule to stay in a singlet form. Thus, the ground electronic state of Fischer ligands were singlet states instead of triplet states. However, for a Schrock ligand ($CH_2$), the energy of its triplet state was lower than its singlet states, meaning that triplet states was more stable for Schrock ligands. Therefore, the ground electronic state of Schrock ligands was triplet states. 
+The energy of a triplet Fischer ligand ($C(OMe)Me$) was higher than the energy of its singlet form as shown in Table 2, meaning that it was more stable for a Fischer molecule to stay in a singlet form. Thus, the ground electronic state of Fischer ligands was singlet states instead of triplet states. However, for a Schrock ligand ($CH_2$), the energy of its triplet state was lower than its singlet states, meaning that triplet states were more stable for Schrock ligands. Therefore, the ground electronic state of Schrock ligands was a triplet state. \\[1\baselineskip]
 
-The molecular orbital diagram of both $CH_2$ and $C(OMe)Me$ were shown in the \textbf{Figure x}. The Fischer carbene ligand $C(OMe)Me$ contained an enelctron donating group (EDG), which increase the energy of $\pi$-orbital. Thus, the difference between the energy of $\sigma$-donating orbital and $\pi$-accepting orbital was large (\textbf{data needed}), and the two electrons would both stay in the $\sigma$-donating orbital, which makes the Fischer ligand a singlet state. 
-The $\sigma$-donating orbital for $C(OMe)Me$ ligand was HOMO as shwon in \textbf{Figure x, (a)}, and the $\pi$-accepting orbital was LUMO as shown in \textbf{Figure x, (b)}.
-However, the Schrock carbene ligand $CH_2$ does not contained an EDG. Thus, the difference between the energy of $\sigma$-donating orbital and $\pi$-accepting orbital was small enough to allow the two electrons stay in both orbitals as the electron repulsion force might be larger than the energy gap between the two orbitals. Therefore, the Schrock ligand was a triplet state.The $\sigma$-donating orbital was HOMO-1  as shown in \textbf{Figrue x, (c)}, and the $\pi$-accepting orbital was HOMO as shown in \textbf{Figure x, (d)}. 
+The molecular orbital diagram of both $CH_2$ and $C(OMe)Me$ were shown in Figure 3-6. The Fischer carbene ligand $C(OMe)Me$ contained an electron donating group (EDG), which increased the energy of $\pi$-orbital. Thus, the difference between the energy of $\sigma$-donating orbital and $\pi$-accepting orbital was large (9.6 eV), and the two electrons would both stay in the $\sigma$-donating orbital, which makes the Fischer ligand a singlet state. 
+The $\sigma$-donating orbital for $C(OMe)Me$ ligand was HOMO as shown in Figure 3, and the $\pi$-accepting orbital was LUMO as shown in Figure 4.
+However, the Schrock carbene ligand $CH_2$ did not contain an EDG. Thus, the difference between the energy of $\sigma$-donating orbital and $\pi$-accepting orbital was small enough (1.1 eV) to allow the two electrons to stay in both orbitals as the electron repulsion force might be larger than the energy gap between the two orbitals. Therefore, the Schrock ligand was in a triplet state. The $\sigma$-donating orbital was HOMO-1  as shown in Figure 5, and the $\pi$-accepting orbital was HOMO as shown in Figure 6. \\[1\baselineskip]
 
-As the Fischer carbene ligand was in a singlet state, the lone pair electrons were both in the HOMO orbital, which was $\sigma$ donating, while the empty LUMO was acting as $\pi$-accepting orbtial. A pair of electrons from the $\pi$-orbital of the metal donated to the empty LUMO orbital of the carbene ligand, forming the $\pi$ back-bonding as shown in the \textbf{Figure x}.
-The Schrock carbene ligand was in a triplet state, and one of the electron in the $\sigma$-orbital of the carbene ligand was paired with another electron from the metal, forming a $\sigma$ bond. The other electron in the $\pi$ orbital of the carbene ligand paired with another electrons from the $\pi$ orbital of the metal, forming a $\pi$ bonding as shown in the \textbf{Figure x}.
-
-\begin{figure}[h!]
-      \centering
-      \includegraphics[width=0.95\columnwidth]{CH2 HOMO-1.png} %an example of how to make your figure a specific size (fraction of the width of the column), if you'd like it to span the column instead, delete the number before the \)
-      \vspace{2mm} %just an example of how space can be added if need be, replace with '\hspace' for horizontal padding
-      \caption{Same}
-\end{figure}
-
-
-The four different strucutres of $Ph(OMe)CCr(CO)_5$ were shown in \textbf{Figure x}, and their energy was recorded in Table 3. The syn-eclipsed form had the lowest structure, which means that it was the most stable structure. This was further proven by the experimental crystal structure of $[Cr(CO)_5(C(OMe)Ph)]$. The difference of energy between the syn-conformation and anti-conformation was large as comparing to the difference between the eclipsed structure and the staggered structure. This indicated that it was more difficult to transform from the syn-conformation to the anti-conformation, which proved the restricted rotation of C-Y (C-O) bond. The bond length of the C-O bond was \textbf{data needed}, which was between the length of a single bond (1.43 Å) and a double bond (1.23 Å) \textbf{reference needed}. This indicated that the C-O bond was a partial double bond, and the bond length of C-O was closer to a double bond rather than a single bond, indicating that the C-O bond had more double bond properties. Thus, $[Cr(CO)_5(C(OMe)Ph)]$ would prefer the left resonance structure as shown in \textbf{Figure x}.
+As the Fischer carbene ligand was in a singlet state, the lone pair electrons were both in the HOMO orbital, which was $\sigma$ donating, while the empty LUMO was acting as $\pi$-accepting orbital. A pair of electrons from the $\pi$-orbital of the metal donated to the empty LUMO orbital of the carbene ligand, forming the $\pi$ back-bonding as shown in Figure 7.
+The Schrock carbene ligand was in a triplet state, and one of the electrons in the $\sigma$-orbital of the carbene ligand was paired with another electron from the metal, forming a $\sigma$ bond. The other electron in the $\pi$ orbital of the carbene ligand paired with another electron from the $\pi$ orbital of the metal, forming a $\pi$ bonding as shown in the Figure 6.
 
 \begin{figure}[h!]
       \centering
-      \includegraphics[width=0.95\columnwidth]{CH2 HOMO-1.png} %an example of how to make your figure a specific size (fraction of the width of the column), if you'd like it to span the column instead, delete the number before the \)
+      \includegraphics[width=0.95\columnwidth]{MO diagram.png} %an example of how to make your figure a specific size (fraction of the width of the column), if you'd like it to span the column instead, delete the number before the \)
       \vspace{2mm} %just an example of how space can be added if need be, replace with '\hspace' for horizontal padding
-      \caption{Same}
+      \caption{The molecular ortbial diagram of Fishcer and Schrock carbene bonding to a metal.}
 \end{figure}
 
-The reaction from $Ph(OMe)CCr(CO)_5$ to $Ph(NH_2)CCr(CO)_5$ was shown in \textbf{Figure x}. The charge of the central carbon of Fischer carbene ligand was positive as shown in Table 4, meaning that it was electrophilic. When -OMe group was replaced by -$NH_2$ group, the electron density of the central carbon was increased as -$NH_2$ group was more electron donating than -OMe. For this reason, the charge of the central carbon became less positive, meaning it was less electrophilic and less reactive.
+
+The four different structures of $[Cr(CO)_5(C(OMe)Ph)]$ were shown in Figure 8-11, and their energy was recorded in Table 3. The syn-eclipsed form had the lowest structure, which means that it was the most stable structure. This was further proven by the experimental crystal structure of $[Cr(CO)_5(C(OMe)Ph)]$. The difference in energy between the syn-conformation and anti-conformation was large as compared to the difference between the eclipsed structure and the staggered structure. This indicated that it was more difficult to transform from the syn-conformation to the anti-conformation, which proved the restricted rotation of the C-Y (C-O) bond. The bond length of the C-O bond was 1.340 Å, which was between the length of a single bond (1.43 Å) and a double bond (1.23 Å).\cite{book1} This indicated that the C-O bond was a partial double bond, and the bond length of C-O was closer to a double bond rather than a single bond, indicating that the C-O bond had more double bond properties. Thus, $[Cr(CO)_5(C(OMe)Ph)]$ would prefer the left resonance structure as shown in Figure 8.
 
 \begin{figure}[h!]
       \centering
-      \includegraphics[width=0.95\columnwidth]{CH2 HOMO-1.png} %an example of how to make your figure a specific size (fraction of the width of the column), if you'd like it to span the column instead, delete the number before the \)
+      \includegraphics[width=0.95\columnwidth]{(CO)5CrCOMePh (0,0)_Prof_1.png} %an example of how to make your figure a specific size (fraction of the width of the column), if you'd like it to span the column instead, delete the number before the \)
       \vspace{2mm} %just an example of how space can be added if need be, replace with '\hspace' for horizontal padding
-      \caption{Same}
+      \caption{The syn-eclipsed structure of $[Cr(CO)_5(C(OMe)Ph)]$.}
 \end{figure}
-
-The reaction from $TaCp_2Me(CH_2)$ to $TaCp_2Me(CH_2)AlMe_3$ was shown in \textbf{Figure x}. For Schrock carbene, the charge of the central carbon become less negative, which indicates that the carbon become less nucleophilic when $AlMe_3$ was added to the central carbon. Therefore, the Schrock molecule was less reactive. 
 
 \begin{figure}[h!]
       \centering
-      \includegraphics[width=0.95\columnwidth]{CH2 HOMO-1.png} %an example of how to make your figure a specific size (fraction of the width of the column), if you'd like it to span the column instead, delete the number before the \)
+      \includegraphics[width=0.95\columnwidth]{(CO)5CrCOMePh (0,45).png} %an example of how to make your figure a specific size (fraction of the width of the column), if you'd like it to span the column instead, delete the number before the \)
       \vspace{2mm} %just an example of how space can be added if need be, replace with '\hspace' for horizontal padding
-      \caption{Same}
+      \caption{The syn-staggered structure of $[Cr(CO)_5(C(OMe)Ph)]$.}
 \end{figure}
 
-This experiment was fully based on computational methods including "Molecular Mechanics" and "Semi-Empirical" methods using Spartan Student version8. The first part of this experiment calcualte the inversion activation energy of 16 different trigonal pyramidal molecules with N or P as the central atoms. The energy difference were explained by the nature of the central atom, the substituent effect, the steric effect, the conjugation effect, and the ring strain effect. The second part of the experiment was focused on carbene. The two types of carbene, Fischer (-C(OMe)Me) and Schrock (-$CH_2$), were analysed. The ground electronic state of a Fischer carbene was a singlet state due to the electon donating group -OMe, while the ground electronic state for Schrock carbene was triplet. The HOMO orbital containing the lone pair electrons of Fischer carbene acting as $\sigma$-donating orbital, while the empty LUMO ortbial acting as a $\pi$-accepting orbital. For a Schrock carbene, the HOMO-1 orbital containing one electron was the $\sigma$-donating orbital, while the other HOMO containing one electron acted as $\pi$ orbital. The C-O bond for the Fischer carbene had partial double bonds properties and its rotation was restricted. The charge of the central carbon of the Fischer carbene was positive, indicating that it was electrophilic, while the Schrock carbene was nucleophilic as the charge of its central carbon was negative. As this experiment was based on a computational calcualtion, further wet-lab experiment could be done to confirm the information obtianed by calculation.
+\begin{figure}[h!]
+      \centering
+      \includegraphics[width=0.95\columnwidth]{(CO)5CrCOMePh (180,0).png} %an example of how to make your figure a specific size (fraction of the width of the column), if you'd like it to span the column instead, delete the number before the \)
+      \vspace{2mm} %just an example of how space can be added if need be, replace with '\hspace' for horizontal padding
+      \caption{The anti-eclipsed structure of $[Cr(CO)_5(C(OMe)Ph)]$.}
+\end{figure}
+
+\begin{figure}[h!]
+      \centering
+      \includegraphics[width=0.95\columnwidth]{(CO)5CrCOMePh (180,45).png} %an example of how to make your figure a specific size (fraction of the width of the column), if you'd like it to span the column instead, delete the number before the \)
+      \vspace{2mm} %just an example of how space can be added if need be, replace with '\hspace' for horizontal padding
+      \caption{The anti-staggered structure of $[Cr(CO)_5(C(OMe)Ph)]$.}
+\end{figure}
+
+The reaction from $Ph(OMe)CCr(CO)_5$ to $Ph(NH_2)CCr(CO)_5$ was shown in Figure 12. The charge of the central carbon of Fischer carbene ligand was positive as shown in Table 4, meaning that it was electrophilic. When the -OMe group was replaced by the -$NH_2$ group, the electron density of the central carbon was increased as the -$NH_2$ group was more electron donating than -OMe. For this reason, the charge of the central carbon became less positive, meaning it was less electrophilic and less reactive.
+
+\begin{figure}[h!]
+      \centering
+      \includegraphics[width=0.95\columnwidth]{Cr.jpeg} %an example of how to make your figure a specific size (fraction of the width of the column), if you'd like it to span the column instead, delete the number before the \)
+      \vspace{2mm} %just an example of how space can be added if need be, replace with '\hspace' for horizontal padding
+      \caption{The reaction energy diagram from $Ph(OMe)CCr(CO)_5$ to $Ph(NH_2)CCr(CO)_5$.\cite{Montgomery}}
+\end{figure}
+
+The reaction from $TaCp_2Me(CH_2)$ to $TaCp_2Me(CH_2)AlMe_3$ was shown in Figure 13. For Schrock carbene, the charge of the central carbon became less negative, which indicates that the carbon became less nucleophilic when $AlMe_3$ was added to the central carbon. Therefore, the Schrock molecule was less reactive. 
+
+\begin{figure}[h!]
+      \centering
+      \includegraphics[width=0.95\columnwidth]{Ta.jpeg} %an example of how to make your figure a specific size (fraction of the width of the column), if you'd like it to span the column instead, delete the number before the \)
+      \vspace{2mm} %just an example of how space can be added if need be, replace with '\hspace' for horizontal padding
+      \caption{The reaction energy diagram from $TaCp_2Me(CH_2)$ to $TaCp_2Me(CH_2)AlMe_3$.\cite{Montgomery}}
+\end{figure}
+
+This experiment was fully based on computational methods including "Molecular Mechanics" and "Semi-Empirical" methods using the Spartan Student version 8. The first part of this experiment calculated the inversion activation energy of 16 different trigonal pyramidal molecules with N or P as the central atoms. The energy differences were explained by the nature of the central atom, the substituent effect, the steric effect, the conjugation effect, and the ring strain effect. The second part of the experiment was focused on carbene. The two types of carbene, Fischer (-$C(OMe)Me$) and Schrock (-$CH_2$), were analysed. The ground electronic state of a Fischer carbene was a singlet state due to the electron donating group -OMe, while the ground electronic state for Schrock carbene was a triplet. The HOMO orbital containing the lone pair electrons of Fischer carbene acted as a $\sigma$-donating orbital, while the empty LUMO orbital acted as a $\pi$-accepting orbital. For a Schrock carbene, the HOMO-1 orbital containing one electron was the $\sigma$-donating orbital, while the other HOMO containing one electron acted as $\pi$ orbital. The C-O bond for the Fischer carbene had partial double bond properties and its rotation was restricted. The charge of the central carbon of the Fischer carbene was positive, indicating that it was electrophilic, while the Schrock carbene was nucleophilic as the charge of its central carbon was negative. As this experiment was based on a computational calculation, further wet-lab experiments could be done to confirm the information obtained by calculation.
 
 
 
-\textbf{brief conclusion and further work} 
 
 
 %Here is an example of a figure.
@@ -350,7 +414,7 @@ This experiment was fully based on computational methods including "Molecular Me
 
 \section{Investigation Question}
 
-The efficiency of solar materials was largely depended on the band gap of the molecule. The band gap was the energy between valence band and conduction band \cite{investigation}, representing the minium energy required for the excitation of an electron to a higher energy level \cite{Bandgap2020}. The ideal band gap for a photovoltaic material was around 1.4 eV with an limiting efficiency around 33.7\% (Shockley–Queisser limit). \cite{Bandgap1961} 
+The efficiency of solar materials largely depended on the band gap of the molecule. The band gap was the energy between the valence band and conduction band \cite{investigation}, representing the minimum energy required for the excitation of an electron to a higher energy level \cite{Bandgap2020}. The ideal band gap for a photovoltaic material was around 1.4 eV with a limiting efficiency of around 33.7\% (Shockley–Queisser limit). \cite{Bandgap1961} 
 
 A computational method could be used to select the potential photovoltaic material. The advantages of using the computational method include:
 
@@ -359,19 +423,22 @@ A computational method could be used to select the potential photovoltaic materi
       \item The cost of computational methods was much lower than the wet-lab experiment as no chemicals were needed. 
 \end{enumerate}
 
-There were several methods could be used to calculate the band gap of a molecule. DFT could provide information about the structures and stabilities of photovoltaic materials in a relatively short time. However, it would greatly underestimate the band gap. While GW could provide accurate information about molecules but facing some challenges including spin-orbital coupling effects and a high computational cost. Thus, the most suitable method was DFT-1/2, which could model the band gap with and accuracy close to the GM method and had a lower cost similar to DFT method. DFT-1/2 had been proved that it could calculate the band energy of metal halide perovskites $AMX_3$, while $A=Cs, CH_3NH_3, CH_2NHCH_2, M=Sn, Pb; X=I, Br, Cl$, with high accuracy. 
+There were several methods could be used to calculate the band gap of a molecule. DFT could provide information about the structures and stabilities of photovoltaic materials in a relatively short time. However, it would greatly underestimate the band gap. While GW could provide accurate information about molecules but faced some challenges including spin-orbital coupling effects and a high computational cost. Thus, the most suitable method was DFT-1/2, which could model the band gap with an accuracy close to the GM method and had a lower cost similar to the DFT method. DFT-1/2 has been proved that it could calculate the band energy of metal halide perovskites $AMX_3$, while $A=Cs, CH_3NH_3, CH_2NHCH_2, M=Sn, Pb; X=I, Br, Cl$, with high accuracy. 
 
-To select the new potential solar materials, the band energy of possible candidates could be calculate using DFT-1/2 method. For example, each component of metal halide perovskites, A/M/X, could be changed, and the band gap would be calcualted for each molecule. The molecule with the band gap close to 1.4 eV would be selected, and further analysis would be required for these molecules to determine if it was a suitable solar materials. 
+To select the new potential solar materials, the band energy of possible candidates could be calculated using the DFT-1/2 method. For example, each component of metal halide perovskites, A/M/X, could be changed, and the band gap would be calculated for each molecule. The molecule with a band gap close to 1.4 eV would be selected, and further analysis would be required for these molecules to determine if it was a suitable solar material. 
 
 The solar materials selected by using the computational method might not be suitable for industrial for several reasons:
 
-1. The experimental data might be different from computational calculation.
+\begin{enumerate}
 
-2. The material selected might be rare in nature.
+      \item The experimental data might be different from the computational calculation.
 
-3. The cost of producing the material might be high.
+      \item The material selected might be rare in nature.
 
-4. The process of producing this material might be harmful to the environment. 
+      \item The cost of producing the material might be high.
+
+      \item The process of producing this material might be harmful to the environment. 
+\end{enumerate}
 
 Therefore, once the solar materials were selected based on the computational calculation, further wet-lab experiments were necessary to ensure that it was suitable for industrial. 
 
