@@ -1,0 +1,28 @@
+@article{6,
+title = {A case study of bioremediation of petroleum-hydrocarbon contaminated soil at a crude oil spill site},
+journal = {Sci Rep},
+volume = {10},
+number = {9188},
+pages = {9188},
+year = {2020},
+doi = {https://doi.org/10.1038/s41598-020-66169-5},
+author = {Zhang, C., Wu, D. & Ren, H.},
+}
+
+@article{7,
+title = {Soil bioremediation approaches for petroleum hydrocarbon polluted environments},
+journal = {AIMS microbiology},
+volume = {3},
+number = {1},
+pages = {25-49},
+year = {2020},
+doi = {https://doi.org/10.1038/s41598-020-66169-5},
+author = {Koshlaf, E., & Ball, A. S.},
+}
+
+@book{7.2,
+  title={Biodegradation and bioremediation},
+  author={Alexander, Martin},
+  year={1999},
+  publisher={Gulf Professional Publishing}
+}
